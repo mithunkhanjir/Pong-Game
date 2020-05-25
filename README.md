@@ -7,6 +7,6 @@ Rules:
 Assets:
       All assets used were made by me using Affinity Designer.
       
-Executable:
+Exe:
       Executable Pong.exe file can be found under Pong\Executable folder.
       
