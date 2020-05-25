@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
 
     public int p1Score;
     public int p2Score;
-
+    
+    // Player score - UI 
     public GameObject p1Text;
     public GameObject p2Text;
 
@@ -25,7 +26,6 @@ public class GameManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Decide Winner
@@ -42,9 +42,11 @@ public class GameManager : MonoBehaviour
             StartCoroutine("Quit");
         }
     }
+
+    //Reset everything
     public void InitRound()
     {
-        //Reset everything
+        
         ball.GetComponent<Ball>().Reset();
         p1.GetComponent<Player>().ResetLoc();
         p2.GetComponent<Player>().ResetLoc();
@@ -69,6 +71,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Quit()
     {
+        //Wait for 2 seconds before closing the game
         yield return new WaitForSeconds(2);
         Application.Quit();
     }

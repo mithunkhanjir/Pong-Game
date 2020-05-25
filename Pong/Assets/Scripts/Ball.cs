@@ -46,7 +46,7 @@ public class Ball : MonoBehaviour
     }
 
     public void Reset()
-    {
+    {   //Reset position and velocity of ball at the end of a round
         transform.position = new Vector2(startPos.transform.position.x, startPos.transform.position.y);
         rb.velocity = Vector2.zero;
         StartCoroutine(Wait());
@@ -55,6 +55,7 @@ public class Ball : MonoBehaviour
 
     IEnumerator Wait()
     {
+        //Wait for 2 seconds before starting the next round i.e for the ball to start moving
         yield return new WaitForSeconds(2);
         MoveBall();
     }

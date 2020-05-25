@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
 
     [SerializeField]
     private bool leftWall;
@@ -21,8 +21,9 @@ public class Score : MonoBehaviour
         if(col.gameObject.CompareTag("Ball"))
         {
 
-            //GameObject.Find("GameManager").GetComponent<GameManager>().InitRound();
-         //gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+            //gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+            //Determine which wall has been hit by the wall
             gm.InitRound();
             if (leftWall == true)
             {
